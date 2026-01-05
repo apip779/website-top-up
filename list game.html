@@ -1,0 +1,93 @@
+<!-- index.html - Halaman utama dengan daftar game (responsif) -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Top Up Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .game-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .game-item {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            width: 200px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .game-item:hover {
+            transform: scale(1.05);
+        }
+        .game-item img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .game-item h3 {
+            margin: 10px 0;
+            color: #333;
+        }
+        /* Responsif */
+        @media (max-width: 768px) {
+            .game-item {
+                width: 150px;
+                padding: 15px;
+            }
+            .game-item img {
+                width: 80px;
+                height: 80px;
+            }
+        }
+        @media (max-width: 480px) {
+            .game-list {
+                flex-direction: column;
+                align-items: center;
+            }
+            .game-item {
+                width: 90%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Daftar Game Top Up</h1>
+    <div class="game-list">
+        <div class="game-item" onclick="window.location.href='ML.html'">
+            <img src="img/free fire.jpg" alt="Mobile Legends">
+            <h3>Mobile Legends</h3>
+        </div>
+        <div class="game-item" onclick="window.location.href='pubg.html'">
+            <img src="https://via.placeholder.com/100?text=PUBG" alt="PUBG Mobile">
+            <h3>PUBG Mobile</h3>
+        </div>
+        <div class="game-item" onclick="window.location.href='free-fire.html'">
+            <img src="https://via.placeholder.com/100?text=FF" alt="Free Fire">
+            <h3>Free Fire</h3>
+        </div>
+        <div class="game-item" onclick="window.location.href='GENSHIN.html'">
+            <img src="https://via.placeholder.com/100?text=GI" alt="Genshin Impact">
+            <h3>Genshin Impact</h3>
+        </div>
+    </div>
+</body>
+</html>
